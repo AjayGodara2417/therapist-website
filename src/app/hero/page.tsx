@@ -35,36 +35,36 @@ export default function Hero() {
           </div>
 
           {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
             <h2
               className={`text-3xl sm:text-4xl md:text-5xl font-serif font-semibold mb-4 transition-all duration-700 ${
-                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
-              Psychological Care for
+              Discover Your Brighter Tomorrow
             </h2>
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6 transition-all duration-700 delay-200 ${
-                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              className={`text-4xl sm:text-5xl font-serif font-bold mb-6 transition-all duration-700 delay-200 ${
+              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
-              Change, Insight, and Well-Being
+              Compassionate Therapy for Growth & Healing
             </h1>
             <p
               className={`text-base sm:text-lg max-w-2xl mb-8 font-light transition-all duration-700 delay-400 ${
-                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
-              Offering individual psychotherapy for adults via telehealth in Michigan and most U.S. states through PSYPACT participation
+              Begin your journey to self-discovery and resilience. Personalized support for adults, available virtually across Michigan and most U.S. states through PSYPACT.
             </p>
             <button
               className={`bg-[#a7bcb4] hover:bg-[#92aaa1] text-white text-xs sm:text-sm tracking-wide px-8 py-3 rounded-full transition duration-700 delay-600 ${
-                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
-              SCHEDULE A CONSULTATION
+              START YOUR JOURNEY
             </button>
-          </div>
+            </div>
         </div>
       </div>
     </section>

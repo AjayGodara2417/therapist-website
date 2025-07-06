@@ -47,7 +47,7 @@ export default function ServicesPage() {
             introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          Therapy can be a space where you invest in yourself—
+          Discover a path to healing, growth, and self-discovery.
         </h2>
         <p
           className={`text-xl transition-all duration-700 ${
@@ -55,7 +55,7 @@ export default function ServicesPage() {
           }`}
           style={{ transitionDelay: '150ms' }}
         >
-          one of the highest forms of self-care.
+          Therapy is a courageous step toward understanding yourself and embracing positive change.
         </p>
         <p
           className={`text-sm text-gray-700 leading-relaxed transition-all duration-700 ${
@@ -63,10 +63,7 @@ export default function ServicesPage() {
           }`}
           style={{ transitionDelay: '300ms' }}
         >
-          You may be led to therapy by anxiety, depression, relationship stress, past or recent trauma, grief and loss,
-          self-esteem issues, or challenges with family, parenting, or parental relationships. Whatever the source of
-          your stress, you don’t have to face it alone. Therapy offers you the time and space to work toward wellness
-          and peace.
+          Whether you’re navigating anxiety, working through past experiences, or seeking deeper connections, you deserve support that honors your unique journey. Together, we’ll create a safe, compassionate space where your voice is heard and your goals matter. Let’s work side by side to foster resilience, clarity, and a renewed sense of well-being.
         </p>
         <hr className="mt-10 border-t border-gray-400" />
       </section>
@@ -84,21 +81,21 @@ export default function ServicesPage() {
             {
               title: 'Anxiety & Stress Management',
               description:
-                'The care you provide for others may be driving you to seek therapy—burnout, compassion fatigue, or people-pleasing tendencies. We can address the stressors of your environment and your life.',
+                'Learn to manage overwhelming thoughts, reduce stress, and develop healthy coping strategies. Therapy can help you understand anxiety triggers and build resilience for a calmer, more balanced life.',
               imageSrc: '/service1.jpg',
               alt: 'Healthcare professional therapy',
             },
             {
               title: 'Relationship Counseling',
               description:
-                'Life’s challenges, childhood trauma, or loss can lead to deep emotional wounds. Therapy provides a supportive space for healing and grounding.',
+                'Improve communication, resolve conflicts, and strengthen your connections. Whether you’re facing challenges with a partner, family, or friends, therapy offers a safe space to foster healthier relationships.',
               imageSrc: '/service2.jpg',
               alt: 'Holding flower in hands',
             },
             {
               title: 'Trauma Recovery',
               description:
-                'Navigating cultures and expectations can be hard. Therapy provides support to explore your identity and strengthen relationships in immigrant family contexts.',
+                'Heal from past experiences and regain a sense of safety and control. Therapy supports you in processing trauma, building self-compassion, and moving forward with renewed confidence.',
               imageSrc: '/service3.jpg',
               alt: 'Holding American flag stickers',
             },
