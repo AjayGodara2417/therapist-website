@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OceanBanner() {
   return (
-    <div className="relative w-full h-[600px]">
+    <div className="relative w-full h-[550px]">
       <Image
         src="/ocean.jpg"
         alt="Ocean waves"
