@@ -15,6 +15,14 @@ export default function ContactForm() {
   const [visible, setVisible] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
 
+  // Optional: Load saved data from localStorage
+  useEffect(() => {
+    const savedData = localStorage.getItem('contactFormData');
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    }
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,7 +43,21 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+
+    // Save to localStorage
+    localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+    console.log('Form data saved to localStorage:', formData);
+
+    // Optional: Clear form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      contactTime: '',
+      contactMethod: '',
+    });
   };
 
   return (
@@ -55,18 +77,18 @@ export default function ContactForm() {
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {[
+          {([
             { label: 'Name', name: 'name', type: 'text', placeholder: 'Jane Doe' },
             { label: 'Email', name: 'email', type: 'email', placeholder: 'you@example.com' },
             { label: 'Phone', name: 'phone', type: 'tel', placeholder: '(555) 234-5678' },
-          ].map((field, i) => (
+          ] as const).map((field, i) => (
             <div key={i}>
               <label className="block text-sm font-medium text-gray-800">{field.label}</label>
               <input
                 type={field.type}
                 name={field.name}
                 placeholder={field.placeholder}
-                value={formData[field.name as keyof typeof formData]}
+                value={formData[field.name]}
                 onChange={handleChange}
                 required
                 className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-300 focus:outline-none"
@@ -82,6 +104,7 @@ export default function ContactForm() {
               placeholder="How can I help you?"
               value={formData.message}
               onChange={handleChange}
+              required
               className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-300 focus:outline-none"
             />
           </div>
@@ -94,6 +117,7 @@ export default function ContactForm() {
               placeholder="e.g., Mornings, Afternoons, Weekends"
               value={formData.contactTime}
               onChange={handleChange}
+              required
               className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-300 focus:outline-none"
             />
             <p className="text-xs text-gray-500 mt-1">
@@ -107,6 +131,7 @@ export default function ContactForm() {
               name="contactMethod"
               value={formData.contactMethod}
               onChange={handleChange}
+              required
               className="w-full mt-1 px-4 py-2 border rounded-lg bg-white focus:ring-2 focus:ring-green-300 focus:outline-none"
             >
               <option value="">Choose an option</option>
