@@ -4,6 +4,8 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
+        serif: ['Georgia', 'serif'],
+        sans: ['"Open Sans"', 'sans-serif'],
         heading: ['Lora', 'serif'],
         body: ['Montserrat', 'sans-serif'],
       },
